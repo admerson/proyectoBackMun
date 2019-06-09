@@ -3,7 +3,7 @@ class viewsModelssB{
 
     public function obtner_views_models($views){
         $listBlack= ["inicio","login","gobernante","misionVision","noticias","obrasProyectos",
-            "organigrama","planDesarrollo","slider","usuario"];
+            "organigrama","planDesarrollo","slider","usuario","salir"];
 
         if (in_array($views,$listBlack)){
             if (is_file("./views/contenidos/".$views.".php")){

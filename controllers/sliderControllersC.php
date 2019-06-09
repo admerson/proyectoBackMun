@@ -1,5 +1,5 @@
 <?php
-//require_once "./models/sliderModelsM.php";
+require_once "./models/sliderModelsM.php";
 //require_once "./models/conexion.php";
 
 class GestorSlidersC {
@@ -85,16 +85,16 @@ class GestorSlidersC {
     }
 
 
-    public function mostrarSlidersTablas($pagina,$registros){
+
+    public function vistaSliderController($pagina,$registros){
 
         $tabla="";
 
-        $pagina=(isset($pagina)&& $pagina>0) ?(int)$pagina:1;
-
+        $pagina= (isset($pagina)&&$pagina>0) ?(int)$pagina:1;
         //------------contador de datos en la base de datos---------------------
         $inicio=($pagina>0) ?(($pagina*$registros)-$registros) :0;
 
-        $conexion=Conexion::conectar();
+        $conexion=GestorsliderM::conectar();
 
         $datos=$conexion->query("
         SELECT SQL_CALC_FOUND_ROWS * FROM slider WHERE idslider!='1'
@@ -108,58 +108,89 @@ class GestorSlidersC {
         //total de numeros de paginas
         $Npaginas=ceil($total/$registros);
 
+        /*-------------------------paginando en una lista---------------------------*/
         $tabla.='<div class="table-responsive">
-                        <table class="table table-hover text-center">
-                            <thead>
-                            <tr>
-                                <th class="text-center">#</th>
-                                <th class="text-center">Titulo</th>
-                                <th class="text-center">Imagen</th>
-                                <th class="text-center">Update</th>
-                                <th class="text-center">Delete</th>
-                            </tr>
-                            </thead>
-                            <tbody>';
+                <table class="table table-hover text-center">
+                    <thead>
+                    <tr>
+                        <th class="text-center">#</th>
+                        <th class="text-center">ID</th>
+                        <th class="text-center">TITULO</th>
+                        <th class="text-center">RUTA</th>
+                        <th class="text-center">ELIMINAR</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    ';
         if ($total>=1 && $pagina<=$Npaginas){
             $contador=$inicio+1;
-            foreach ($datos as $rows) {
+            foreach ($datos as $rows){
                 $tabla.='<tr>
-                                <td>'.$contador.'</td>
-                                <td>'.$rows["idslider"].'</td>
-                                <td>'.$rows["titulo_slider"].'</td>
-                                <td>'.$rows["ruta_slider"].'</td>
+                            <td>'.$contador.'</td>
+                            <td>'.$rows['idslider'].'</td>
+                            <td>'.$rows['titulo_slider'].'</td>
+                            <td>'.$rows['ruta_slider'].'</td>
+                            
+                            <td>
+                                <form>
+                                    <button type="submit" class="btn btn-danger btn-raised btn-xs">
+                                        <i class="zmdi zmdi-delete"></i>
+                                    </button>
+                                </form>
+                            </td>
+                        </tr>
+                        ';
 
-                                <td><a href="#!" class="btn btn-success btn-raised btn-xs"><i class="zmdi zmdi-refresh"></i></a></td>
-                                <td><a href="#!" class="btn btn-danger btn-raised btn-xs"><i class="zmdi zmdi-delete"></i></a></td>
-                            </tr>';
                 $contador++;
             }
-        }
-        else{
+        }else{
             /*---------------------para eliminar el mensaje que muestra-----------------------*/
             if($total>=1){
                 $tabla.='
-        <tr>
-            <td colspan="5"></td>
-        
-        </tr>
-        ';
+            <tr>
+                <td colspan="5"></td>
+            
+            </tr>
+            ';
             }else{
                 $tabla.='
-        <tr>
-            <td colspan="5">No hay registros en el sistema</td>
-        
-        </tr>
-        ';
+            <tr>
+                <td colspan="5">No hay registros en el sistema</td>
+            
+            </tr>
+            ';
             }
 
         }
         $tabla.='</tbody></table></div>';
 
 
-        return $tabla;
+        /*.--------------PAGINADOR--------------------*/
+
+        if ($total>=1 && $pagina<=$Npaginas){
+            $tabla.='<nav class="text-center">
+                        <ul class="pagination pagination-sm">';
+
+            if ($pagina==1){
+                $tabla.='<li class="disabled"><a href="slider/'.($pagina-1).'"><i class="zmdi zmdi-arrow-left"></i></a></li>';
+            }else{
+
+            }
+
+            $tabla.='</ul></nav>';
+        }
+
+
+
+
+        return  $tabla;
+
+
 
     }
+
+
+
 
 
 }

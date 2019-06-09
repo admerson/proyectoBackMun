@@ -5,6 +5,12 @@
     <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse voluptas reiciendis tempora voluptatum eius porro ipsa quae voluptates</p>
 </div>
 
+<?
+require_once "./controllers/adminListControllersC.php";
+$insAdmin=new adminListControllerssC();
+
+?>
+
 
 <div class="container-fluid">
     <div class="row">
@@ -72,39 +78,12 @@
                     </div>
                 </div>
                 <div class="tab-pane fade active in" id="lista">
-                    <div class="table-responsive">
-                        <table class="table table-hover text-center">
-                            <thead>
-                            <tr>
-                                <th class="text-center">#</th>
-                                <th class="text-center">Titulo</th>
-                                <th class="text-center">Codigo</th>
-                                <th class="text-center">Imagen</th>
-                                <th class="text-center">Estado</th>
-                                <th class="text-center">Contenido</th>
-                                <th class="text-center">Update</th>
-                                <th class="text-center">Delete</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td class="text-left">Title Lorem ipsum dolor sit.</td>
-                                <td class="text-left">20131417</td>
-                                <td class="text-left">Foto 1</td>
-                                <td class="text-left">Ejecución</td>
-                                <td class="text-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias asperiores corporis dignissimos incidunt ipsum maiores, minus mollitia nemo nulla quae repellat repudiandae sequi, suscipit ullam ut. Aliquid aperiam ea ut!</td>
 
+                    <?php
+                    $pagina=explode("/",$_GET['action']);
+                    echo $insAdmin->vistaUsuariosController($pagina[1],10);
+                    ?>
 
-
-                                <td><a href="#!" class="btn btn-success btn-raised btn-xs"><i class="zmdi zmdi-refresh"></i></a></td>
-                                <td><a href="#!" class="btn btn-danger btn-raised btn-xs"><i class="zmdi zmdi-delete"></i></a></td>
-                            </tr>
-
-                            </tbody>
-                        </table>
-
-                    </div>
                 </div>
             </div>
 

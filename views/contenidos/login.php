@@ -1,3 +1,6 @@
+
+
+
 <link rel="stylesheet" href="views/css/log.css">
 
 <div class="container">

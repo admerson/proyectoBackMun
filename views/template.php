@@ -30,6 +30,15 @@
      require_once "./views/contenidos/login.php";
  }else{
      session_start(["name"=>"MA"]);
+     session_start();
+
+     if(!$_SESSION["validar"]){
+
+         header("location:login");
+
+         exit();
+
+     }
  ?>
 
  <?

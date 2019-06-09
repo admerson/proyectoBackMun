@@ -6,7 +6,7 @@
 <div class="full-box text-center" style="padding: 30px 10px;">
     <article class="full-box tile">
         <div class="full-box tile-title text-center text-titles text-uppercase">
-            Obras Proyectos
+            <a href="obrasProyectos">Obras Proyectos</a>
         </div>
         <div class="full-box tile-icon text-center">
             <i class="zmdi zmdi-case zmdi-hc-f"></i>

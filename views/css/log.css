@@ -3,8 +3,8 @@ html {
 }
 
 body {
-    background-color: #779184;
-    background-image: url('assets/images/pine_bck.jpg');
+    background-color: #eea700;
+    background-image: url('views/assets/images/pine_bck.jpg');
     background-size: cover;
     background-position: center center;
     color: #ffffff;
@@ -119,7 +119,7 @@ body {
     font-size: 12px;
 }
 .box input[type="submit"]{
-    width: - 80px;
+    width: 80%;
     background: transparent;
     border:none;
     outline: none;
@@ -139,7 +139,7 @@ body {
 h1 {
     font-family: 'Libre Baskerville', Georgia, serif;
     line-height: 1;
-    font-size: 2.5 rem;
+    font-size: 2.5rem;
     font-weight: normal;
     margin-top: 4px;
     margin-bottom: 13px;
@@ -194,4 +194,16 @@ a:hover {
 
 .author {
     margin-bottom: 25px;
+}
+
+.error_login{
+    background-color: #eea700;
+    padding: auto;
+    margin: auto;
+    width: 80%;
+
+}
+.alert .alert-danger{
+    background-color: #eea700;
+
 }

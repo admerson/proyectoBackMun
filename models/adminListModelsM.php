@@ -1,7 +1,7 @@
 <?php
 require_once "conexion.php";
 
-class adminListModelssM {
+class adminListModelssM extends Conexion {
 
 
     /*public function guardarObrasProyectosModels($datosModel){

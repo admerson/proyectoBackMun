@@ -1,7 +1,7 @@
 <?php
 require_once "conexion.php";
 
-class GestorsliderM{
+class GestorsliderM extends Conexion {
 
     public function guardarSliderModel($datosModel){
 

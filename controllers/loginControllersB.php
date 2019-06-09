@@ -29,13 +29,20 @@ class loginControllerssB extends loginModelssB{
                 }
                 else {
 
-                    echo '<div class="alert alert-danger">Usuario o contraseña incorrecto</div>';
+                    echo '<div class="alert alert-danger error_login" >Usuario o contraseña incorrecto</div><hr>';
 
                 }
 
             }
         }
 
+    }
+
+
+
+    public function forzar_cierre_session(){
+        session_destroy();
+        header("location:login");
     }
 
 }
