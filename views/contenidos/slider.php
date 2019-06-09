@@ -71,7 +71,7 @@ $insAdmin=new GestorSlidersC();
 
                      <?php
                      $pagina=explode("/",$_GET['action']);
-                     echo $insAdmin->vistaSliderController($pagina[1],2);
+                     echo $insAdmin->vistaSliderController($pagina[1],4);
                      ?>
 
 
