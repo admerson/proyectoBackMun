@@ -1,22 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fbe1e758-8cdd-48c8-9f73-ee0be89028cd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/adminListControllersC.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/adminListControllersC.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/loginControllersB.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/loginControllersB.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/sliderControllersC.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/sliderControllersC.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/adminListModelsM.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/adminListModelsM.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/sliderModelsM.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/sliderModelsM.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/viewsModelsM.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/viewsModelsM.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/contenidos/inicio.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/contenidos/inicio.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/contenidos/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/contenidos/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/contenidos/obrasProyectos.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/contenidos/obrasProyectos.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/contenidos/salir.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/contenidos/salir.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/contenidos/slider.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/contenidos/slider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/css/log.css" beforeDir="false" afterPath="$PROJECT_DIR$/views/css/log.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/template.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/template.php" afterDir="false" />
-    </list>
+    <list default="true" id="fbe1e758-8cdd-48c8-9f73-ee0be89028cd" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -171,7 +156,7 @@
       <path value="C:/php/pear" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="770" />
     <option name="y" value="122" />
     <option name="width" value="1370" />
@@ -249,12 +234,12 @@
       <workItem from="1559689763325" duration="11486000" />
       <workItem from="1559787636477" duration="11266000" />
       <workItem from="1559824000363" duration="2494000" />
-      <workItem from="1559826601272" duration="38429000" />
+      <workItem from="1559826601272" duration="38694000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64914000" />
+    <option name="totallyTimeSpent" value="65179000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
